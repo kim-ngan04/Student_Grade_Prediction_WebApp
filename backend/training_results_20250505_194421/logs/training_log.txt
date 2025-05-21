@@ -1,0 +1,268 @@
+[2025-05-05 19:44:21] ===== BẮT ĐẦU HUẤN LUYỆN MÔ HÌNH DỰ ĐOÁN ĐIỂM SỐ SINH VIÊN =====
+[2025-05-05 19:44:21] Đang đọc tập dữ liệu...
+[2025-05-05 19:44:21] Đọc dữ liệu thành công: 395 dòng và 34 cột
+[2025-05-05 19:44:21] 
+=== PHÂN TÍCH DỮ LIỆU ===
+[2025-05-05 19:44:21] Kích thước dữ liệu: (395, 34)
+[2025-05-05 19:44:21] Các cột trong dữ liệu: student_code, school, sex, age, address, famsize, Pstatus, Medu, Fedu, Mjob, Fjob, reason, guardian, traveltime, studytime, failures, schoolsup, famsup, paid, activities, nursery, higher, internet, romantic, famrel, freetime, goout, Dalc, Walc, health, absences, G1, G2, G3
+[2025-05-05 19:44:21] Không phát hiện giá trị null trong dữ liệu
+[2025-05-05 19:44:21] 
+Thống kê mô tả:
+[2025-05-05 19:44:21] 
+              count         mean          std    min  ...     75%     max  missing  dtype
+student_code  395.0  4948.422785  2820.442089  117.0  ...  7458.0  9997.0        0  int64
+age           395.0    16.696203     1.276043   15.0  ...    18.0    22.0        0  int64
+Medu          395.0     2.749367     1.094735    0.0  ...     4.0     4.0        0  int64
+Fedu          395.0     2.521519     1.088201    0.0  ...     3.0     4.0        0  int64
+traveltime    395.0     1.448101     0.697505    1.0  ...     2.0     4.0        0  int64
+studytime     395.0     2.035443     0.839240    1.0  ...     2.0     4.0        0  int64
+failures      395.0     0.334177     0.743651    0.0  ...     0.0     3.0        0  int64
+famrel        395.0     3.944304     0.896659    1.0  ...     5.0     5.0        0  int64
+freetime      395.0     3.235443     0.998862    1.0  ...     4.0     5.0        0  int64
+goout         395.0     3.108861     1.113278    1.0  ...     4.0     5.0        0  int64
+Dalc          395.0     1.481013     0.890741    1.0  ...     2.0     5.0        0  int64
+Walc          395.0     2.291139     1.287897    1.0  ...     3.0     5.0        0  int64
+health        395.0     3.554430     1.390303    1.0  ...     5.0     5.0        0  int64
+absences      395.0     5.708861     8.003096    0.0  ...     8.0    75.0        0  int64
+G1            395.0    10.908861     3.319195    3.0  ...    13.0    19.0        0  int64
+G2            395.0    10.713924     3.761505    0.0  ...    13.0    19.0        0  int64
+G3            395.0    10.415190     4.581443    0.0  ...    14.0    20.0        0  int64
+
+[17 rows x 10 columns]
+[2025-05-05 19:44:21] 
+Phân tích biến mục tiêu G3:
+[2025-05-05 19:44:21] Giá trị trung bình: 10.42
+[2025-05-05 19:44:21] Độ lệch chuẩn: 4.58
+[2025-05-05 19:44:21] Giá trị nhỏ nhất: 0
+[2025-05-05 19:44:21] Giá trị lớn nhất: 20
+[2025-05-05 19:44:21] Phân phối tứ phân vị: [8.0, 11.0, 14.0]
+[2025-05-05 19:44:21] 
+Đang phân tích tương quan giữa các biến...
+[2025-05-05 19:44:21] 
+Tương quan với G3:
+G3              1.000000
+G2              0.904868
+G1              0.801468
+Medu            0.217147
+Fedu            0.152457
+studytime       0.097820
+famrel          0.051363
+student_code    0.043396
+absences        0.034247
+freetime        0.011307
+Walc           -0.051939
+Dalc           -0.054660
+health         -0.061335
+traveltime     -0.117142
+goout          -0.132791
+age            -0.161579
+failures       -0.360415
+Name: G3, dtype: float64
+[2025-05-05 19:44:22] 
+Đang phân tích các biến phân loại...
+[2025-05-05 19:44:22] 
+Điểm trung bình G3 theo school:
+school
+GP    10.489971
+MS     9.847826
+Name: G3, dtype: float64
+[2025-05-05 19:44:23] 
+Điểm trung bình G3 theo sex:
+sex
+M    10.914439
+F     9.966346
+Name: G3, dtype: float64
+[2025-05-05 19:44:23] 
+Điểm trung bình G3 theo address:
+address
+U    10.674267
+R     9.511364
+Name: G3, dtype: float64
+[2025-05-05 19:44:23] 
+Điểm trung bình G3 theo famsize:
+famsize
+LE3    11.000000
+GT3    10.177936
+Name: G3, dtype: float64
+[2025-05-05 19:44:23] 
+Điểm trung bình G3 theo Pstatus:
+Pstatus
+A    11.195122
+T    10.324859
+Name: G3, dtype: float64
+[2025-05-05 19:44:23] 
+Điểm trung bình G3 theo Mjob:
+Mjob
+health      12.147059
+teacher     11.051724
+services    11.019417
+other        9.822695
+at_home      9.152542
+Name: G3, dtype: float64
+[2025-05-05 19:44:24] 
+Điểm trung bình G3 theo Fjob:
+Fjob
+teacher     11.965517
+health      11.611111
+services    10.297297
+other       10.193548
+at_home     10.150000
+Name: G3, dtype: float64
+[2025-05-05 19:44:24] 
+Điểm trung bình G3 theo reason:
+reason
+other         11.166667
+reputation    11.142857
+home          10.256881
+course         9.820690
+Name: G3, dtype: float64
+[2025-05-05 19:44:24] 
+Điểm trung bình G3 theo guardian:
+guardian
+father    10.688889
+mother    10.483516
+other      9.062500
+Name: G3, dtype: float64
+[2025-05-05 19:44:24] 
+Điểm trung bình G3 theo schoolsup:
+schoolsup
+no     10.561047
+yes     9.431373
+Name: G3, dtype: float64
+[2025-05-05 19:44:24] 
+Điểm trung bình G3 theo famsup:
+famsup
+no     10.640523
+yes    10.272727
+Name: G3, dtype: float64
+[2025-05-05 19:44:25] 
+Điểm trung bình G3 theo paid:
+paid
+yes    10.922652
+no      9.985981
+Name: G3, dtype: float64
+[2025-05-05 19:44:25] 
+Điểm trung bình G3 theo activities:
+activities
+yes    10.487562
+no     10.340206
+Name: G3, dtype: float64
+[2025-05-05 19:44:25] 
+Điểm trung bình G3 theo nursery:
+nursery
+yes    10.535032
+no      9.950617
+Name: G3, dtype: float64
+[2025-05-05 19:44:25] 
+Điểm trung bình G3 theo higher:
+higher
+yes    10.608
+no      6.800
+Name: G3, dtype: float64
+[2025-05-05 19:44:25] 
+Điểm trung bình G3 theo internet:
+internet
+yes    10.617021
+no      9.409091
+Name: G3, dtype: float64
+[2025-05-05 19:44:26] 
+Điểm trung bình G3 theo romantic:
+romantic
+no     10.836502
+yes     9.575758
+Name: G3, dtype: float64
+[2025-05-05 19:44:26] 
+=== TIỀN XỬ LÝ DỮ LIỆU ===
+[2025-05-05 19:44:26] Đang mã hóa các biến phân loại...
+[2025-05-05 19:44:26] Sau khi mã hóa: 43 biến
+[2025-05-05 19:44:26] Đang chia tập dữ liệu thành tập huấn luyện và kiểm tra...
+[2025-05-05 19:44:26] Tập huấn luyện: 316 mẫu
+[2025-05-05 19:44:26] Tập kiểm tra: 79 mẫu
+[2025-05-05 19:44:26] Đang chuẩn hóa dữ liệu...
+[2025-05-05 19:44:26] Đã chuẩn hóa dữ liệu xong
+[2025-05-05 19:44:26] 
+=== LỰA CHỌN ĐẶC TRƯNG ===
+[2025-05-05 19:44:26] Đang xác định các đặc trưng quan trọng...
+[2025-05-05 19:44:26] 
+Top 10 đặc trưng quan trọng nhất:
+           feature  importance
+15              G2    0.791742
+13        absences    0.109130
+29     reason_home    0.020603
+0     student_code    0.009933
+1              age    0.008998
+14              G1    0.005075
+7           famrel    0.004705
+12          health    0.004403
+9            goout    0.004017
+37  activities_yes    0.003524
+[2025-05-05 19:44:26] 
+Số đặc trưng được chọn: 2
+[2025-05-05 19:44:26] Các đặc trưng được chọn: absences, G2
+[2025-05-05 19:44:26] 
+=== HUẤN LUYỆN MÔ HÌNH ===
+[2025-05-05 19:44:26] Đang đánh giá sơ bộ các mô hình...
+[2025-05-05 19:44:26] Hồi quy tuyến tính: RMSE CV = 2.0035 (±0.3765)
+[2025-05-05 19:44:26] Ridge: RMSE CV = 1.9799 (±0.3760)
+[2025-05-05 19:44:26] Lasso: RMSE CV = 1.8743 (±0.4524)
+[2025-05-05 19:44:26] Cây quyết định: RMSE CV = 2.0607 (±0.5523)
+[2025-05-05 19:44:27] Random Forest: RMSE CV = 1.5452 (±0.4905)
+[2025-05-05 19:44:28] Gradient Boosting: RMSE CV = 1.5917 (±0.4064)
+[2025-05-05 19:44:30] XGBoost: RMSE CV = 1.4989 (±0.2998)
+[2025-05-05 19:44:30] 
+Đang tối ưu hóa siêu tham số cho mô hình Cây quyết định...
+[2025-05-05 19:44:37] Siêu tham số tốt nhất cho Cây quyết định: {'criterion': 'absolute_error', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 10}
+[2025-05-05 19:44:37] RMSE tốt nhất từ CV: 1.6404
+[2025-05-05 19:44:37] 
+Đang tối ưu hóa siêu tham số cho mô hình Random Forest...
+[2025-05-05 19:44:51] Siêu tham số tốt nhất cho Random Forest: {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100}
+[2025-05-05 19:44:51] RMSE tốt nhất từ CV: 1.4609
+[2025-05-05 19:44:51] 
+Đang tối ưu hóa siêu tham số cho mô hình XGBoost...
+[2025-05-05 19:45:16] Siêu tham số tốt nhất cho XGBoost: {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+[2025-05-05 19:45:16] RMSE tốt nhất từ CV: 1.4495
+[2025-05-05 19:45:16] 
+=== ĐÁNH GIÁ MÔ HÌNH CUỐI CÙNG ===
+[2025-05-05 19:45:17] 
+Kết quả đánh giá Cây quyết định (tối ưu):
+[2025-05-05 19:45:17] MSE: 5.0918
+[2025-05-05 19:45:17] RMSE: 2.2565
+[2025-05-05 19:45:17] MAE: 1.3101
+[2025-05-05 19:45:17] R²: 0.7517
+[2025-05-05 19:45:18] 
+Kết quả đánh giá Random Forest (tối ưu):
+[2025-05-05 19:45:18] MSE: 3.9850
+[2025-05-05 19:45:18] RMSE: 1.9962
+[2025-05-05 19:45:18] MAE: 1.1914
+[2025-05-05 19:45:18] R²: 0.8057
+[2025-05-05 19:45:18] 
+Kết quả đánh giá XGBoost (tối ưu):
+[2025-05-05 19:45:18] MSE: 3.8383
+[2025-05-05 19:45:18] RMSE: 1.9592
+[2025-05-05 19:45:18] MAE: 1.2328
+[2025-05-05 19:45:18] R²: 0.8128
+[2025-05-05 19:45:19] 
+Mô hình tốt nhất là: XGBoost (tối ưu)
+[2025-05-05 19:45:19] RMSE: 1.9592
+[2025-05-05 19:45:19] R²: 0.8128
+[2025-05-05 19:45:19] 
+Đang lưu các mô hình...
+[2025-05-05 19:45:19] Đã lưu Cây quyết định (tối ưu) tại training_results_20250505_194421\models\Cây_quyết_định_tối_ưu.pkl
+[2025-05-05 19:45:19] Đã lưu Random Forest (tối ưu) tại training_results_20250505_194421\models\Random_Forest_tối_ưu.pkl
+[2025-05-05 19:45:19] Đã lưu XGBoost (tối ưu) tại training_results_20250505_194421\models\XGBoost_tối_ưu.pkl
+[2025-05-05 19:45:19] Đã lưu mô hình tốt nhất tại models/decision_tree_model.pkl
+[2025-05-05 19:45:19] 
+=== THÔNG TIN THÊM VỀ DỮ LIỆU VÀ MÔ HÌNH ===
+[2025-05-05 19:45:19] Đặc trưng quan trọng nhất là: G2
+[2025-05-05 19:45:19] 
+=== TÓM TẮT QUÁ TRÌNH ===
+[2025-05-05 19:45:19] Số lượng mẫu: 395
+[2025-05-05 19:45:19] Số lượng đặc trưng ban đầu: 34
+[2025-05-05 19:45:19] Số lượng đặc trưng sau khi mã hóa: 42
+[2025-05-05 19:45:19] Số lượng đặc trưng được chọn: 2
+[2025-05-05 19:45:19] Mô hình tốt nhất: XGBoost (tối ưu)
+[2025-05-05 19:45:19] RMSE của mô hình tốt nhất: 1.9592
+[2025-05-05 19:45:19] R² của mô hình tốt nhất: 0.8128
+[2025-05-05 19:45:19] Đã lưu mô hình tại: models/decision_tree_model.pkl
+[2025-05-05 19:45:19] 
+===== HOÀN THÀNH QUÁ TRÌNH HUẤN LUYỆN =====
