@@ -1,80 +1,77 @@
-BKLG - Ứng dụng AI dự đoán điểm số sinh viên
-BKLG là một web app, sử dụng trí tuệ nhân tạo (AI) để hỗ trợ giáo viên và sinh viên dự đoán điểm số học tập của sinh viên. Ứng dụng có mục tiêu giúp người dùng có cái nhìn sớm về kết quả học tập, từ đó đưa ra những điều chỉnh kịp thời trong quá trình giảng dạy và học tập.
+# BKLG – AI-Powered Student Grade Prediction Application
 
-Mục Tiêu Của Ứng Dụng
-- Dự Đoán Điểm Số:Sử dụng mô hình Machine Learning để đưa ra dự đoán chính xác về điểm số của sinh viên.
-- Cung Cấp Thông Tin Sớm: Cung cấp thông tin điểm số trước kỳ thi để giáo viên và sinh viên.
-- Hỗ Trợ Giáo Viên và Sinh Viên: Giúp theo dõi sự tiến bộ của sinh viên một cách dễ dàng và hiệu quả.
+BKLG is a web application that leverages Artificial Intelligence (AI) to support teachers and students in predicting academic performance. The primary goal of the application is to provide early insights into student outcomes, enabling timely adjustments in both teaching and learning processes.
 
-Tính Năng Chính
-- Nhập dữ liệu thủ công hoặc từ file CSV.
-- Giao diện hiện đại dựa trên tiêu chuẩn Material Design.
-- Animation mượt mà, dễ sử dụng.
-- Tích hợp AI cho phép dự đoán điểm số sinh viên.
-  
-Frontend
-- Flutter/Dart:Framework chính cho giao diện đa nền tảng.
-- Material Design: Thiết kế UI tối ưu cho trải nghiệm người dùng.
-- HTTP Package: Kết nối với API backend.
+## Application Objectives
+- Grade Prediction: Utilize Machine Learning models to generate accurate predictions of student grades.
+- Early Insights: Provide estimated scores before examinations to assist both teachers and students.
+- Support for Teachers and Students: Facilitate efficient and effective monitoring of student progress.
 
-Backend
-- Python 3.8+: Ngôn ngữ lập trình backend chính.
-- Flask: Web framework nhẹ nhàng và tùy chỉnh.
-- Scikit-learn: Thư viện máy học mạnh mẽ.
-- Pandas & NumPy: Xử lý và phân tích dữ liệu.
-- Joblib: Lưu và tải mô hình AI.
-  
-Yêu Cầu Hệ Thống
-Frontend
-- Flutter SDK: Cài đặt phiên bản mới nhất từ [Flutter Official](https://flutter.dev/docs/get-started/install).
-- Dart SDK: Tích hợp với Flutter.
-- IDE: Visual Studio Code hoặc Android Studio.
-- Git: Quản lý mã nguồn.
+## Key Features
+- Manual data entry or CSV file import.
+- Modern user interface built on Material Design standards.
+- Smooth animations with intuitive usability.
+- Integrated AI models for grade prediction.
 
-Backend
-- Python 3.8 trở lên: Cài đặt từ [Python Official](https://www.python.org/downloads/).
+## Frontend
+- Flutter/Dart: Primary framework for cross-platform UI development.
+- Material Design: Optimized UI/UX design for improved user experience.
+- HTTP Package: Enables communication with backend APIs.
+
+## Backend
+- Python 3.8+: Core backend programming language.
+- Flask: Lightweight and customizable web framework.
+- Scikit-learn: Robust machine learning library.
+- Pandas and NumPy: Data processing and analytical computing libraries.
+- Joblib: Model serialization and deserialization tool.
+
+## System Requirements
+
+### Frontend
+- Flutter SDK: Install the latest version from [Flutter Official](https://flutter.dev/docs/get-started/install).
+- Dart SDK: Integrated with Flutter.
+- IDE: Visual Studio Code or Android Studio.
+- Git: Version control system.
+
+### Backend
+- Python 3.8+: Download from [Python Official](https://www.python.org/downloads/).
 - pip: Python package manager.
-- Nhóm Thư Viện:
+- Required Libraries:
   - flask
   - pandas
   - scikit-learn
   - joblib
   - numpy
 
-Hướng Dẫn Cài Đặt
-1. Cài Đặt Backend
-- Bước 1: Cài đặt Python 3.8+ và pip.
-- Bước 2: Tạo môi trường ảo:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Linux/Mac
-    venv\Scripts\activate     # Windows
-    ```
-- Bước 3: Cài đặt các thư viện cần thiết:
-    ```bash
-    pip install flask pandas scikit-learn joblib numpy
-    ```
-- Bước 4: Khởi động server:
-    ```bash
-    cd backend
-    python app.py
-    ```
-2. Cài Đặt Fronten
-- Bước 1: Cài đặt Flutter SDK và Dart SDK theo hướng dẫn chính thức từ [Flutter Official](https://flutter.dev/docs/get-started/install).
-- Bước 2: Clone repository:
-    ```bash
-    git clone https://github.com/BaoHust2004/IntroAI20242
-    cd IntroAI20242
-    ```
-- Bước 3: Cài đặt dependencies cho dự án:
-    ```bash
-    flutter pub get
-    ```
-- Bước 4: Khởi chạy ứng dụng:
-    ```bash
-    flutter run
-    ```
-3. Lưu Ý Quan Trọng
-- Chạy Backend Trước: Backend phải được chạy trước khi khởi động frontend để đảm bảo kết nối API hoạt động đúng.
-- File Mô Hình AI: Đảm bảo file model AI (decision_tree_model.pkl) đã nằm trong thư mục `backend/models/`.
-- Kiểm Tra URL API: Kiểm tra URL API trong frontend (mặc định là `http://localhost:5000`) và đảm bảo nó phù hợp với cấu hình backend của bạn.
+## Installation Guide
+
+# ===== Backend Setup =====
+# Step 1: Create virtual environment
+python -m venv venv
+
+# Step 2: Activate virtual environment
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+
+# Step 3: Install dependencies
+pip install flask pandas scikit-learn joblib numpy
+
+# Step 4: Start the server
+cd backend
+python app.py
+
+# ===== Frontend Setup =====
+# Step 1: Install Flutter SDK and Dart SDK as per the official guide:
+# https://flutter.dev/docs/get-started/install
+
+# Step 2: Clone the repository
+git clone https://github.com/BaoHust2004/IntroAI20242
+
+# Step 3: Navigate to frontend
+cd frontend
+
+# Step 4: Get dependencies
+flutter pub get
+
+# Step 5: Run the app
+flutter run
