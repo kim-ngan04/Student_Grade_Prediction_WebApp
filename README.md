@@ -1,5 +1,5 @@
-CyberScore - Ứng dụng AI dự đoán điểm số sinh viên
-CyberScore là một web app, sử dụng trí tuệ nhân tạo (AI) để hỗ trợ giáo viên và sinh viên dự đoán điểm số học tập của sinh viên. Ứng dụng có mục tiêu giúp người dùng có cái nhìn sớm về kết quả học tập, từ đó đưa ra những điều chỉnh kịp thời trong quá trình giảng dạy và học tập.
+BKLG - Ứng dụng AI dự đoán điểm số sinh viên
+BKLG là một web app, sử dụng trí tuệ nhân tạo (AI) để hỗ trợ giáo viên và sinh viên dự đoán điểm số học tập của sinh viên. Ứng dụng có mục tiêu giúp người dùng có cái nhìn sớm về kết quả học tập, từ đó đưa ra những điều chỉnh kịp thời trong quá trình giảng dạy và học tập.
 
 Mục Tiêu Của Ứng Dụng
 - Dự Đoán Điểm Số:Sử dụng mô hình Machine Learning để đưa ra dự đoán chính xác về điểm số của sinh viên.
