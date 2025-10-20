@@ -65,7 +65,7 @@ python app.py
 # https://flutter.dev/docs/get-started/install
 
 # Step 2: Clone the repository
-git clone https://github.com/BaoHust2004/IntroAI20242
+git clone https://github.com/kim-ngan04/Student_Grade_Prediction_WebApp
 
 # Step 3: Navigate to frontend
 cd frontend
